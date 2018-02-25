@@ -1,0 +1,28 @@
+text-align: center;
+padding: var(--pad);
+
+form {
+  max-width: 500px;
+  text-align: left;
+  margin: auto;
+  padding: var(--pad);
+  background: rgb(var(--header-bg));
+}
+
+.row:not(.stacked) label {
+  width: calc(50% - 10px);
+}
+
+[type=submit] {
+  --secondary: var(--brand);
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  text-align: center;
+}
+
+footer {
+  opacity: 0.5;
+  font-size: 12px;
+  padding-top: var(--pad);
+}

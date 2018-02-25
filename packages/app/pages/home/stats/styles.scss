@@ -1,0 +1,77 @@
+display: flex;
+align-items: center;
+justify-content: space-around;
+width: 100%;
+height: 33vh;
+
+@media (max-width: 1013px) {
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: var(--pad);
+
+  > div {
+    width: 50%;
+    margin-bottom: var(--pad);
+  }
+}
+
+strong, .progressbar-text {
+  font-size: 3rem;
+
+  @media (max-width: 767px) {
+    font-size: 2rem;
+  }
+}
+
+svg {
+  max-width: 150px;
+  margin: auto;
+
+  @media (max-width: 767px) {
+    max-width: 110px;
+  }
+}
+
+hr {
+  width: 20px;
+  height: 1px;
+  margin: 25px auto;
+  border: 0;
+  background: rgba(var(--gray), .3);
+
+  @media (max-width: 767px) {
+    margin: 10px auto;
+  }
+}
+
+.grouped {
+  display: flex;
+  align-items: center;
+
+  div {
+    display: block;
+    width: 50%;
+    text-align: center;
+  }
+
+  strong {
+    font-size: 1.5rem;
+  }
+}
+
+.container:not(.clone) & div {
+  opacity: 0;
+  animation: scaleInSlight .4s .4s ease-in-out forwards;
+
+  &:nth-child(2) {
+    animation-delay: 0.45s;
+  } &:nth-child(3) {
+    animation-delay: 0.41s;
+  } &:nth-child(4) {
+    animation-delay: 0.415s;
+  }
+
+  .progressbar-text {
+    animation: fadeIn .4s ease-in-out forwards;
+  }
+}

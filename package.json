@@ -1,9 +1,14 @@
 {
+	"name": "bellpiper",
+	"version": "1.0.0",
 	"devDependencies": {
 		"lerna": "^2.9.0",
 		"parallelshell": "*"
 	},
 	"scripts": {
-		"dev": "parallelshell \"cd packages/api && yarn dev\" \"cd packages/app && yarn dev\" \"cd packages/site && yarn dev\""
+		"dev": "parallelshell \"cd packages/api && yarn dev\" \"cd packages/app && yarn dev\" \"cd packages/site && yarn dev\"",
+		"app": "cd packages/app && yarn dev",
+		"api": "cd packages/api && yarn dev",
+		"site": "cd packages/site && yarn dev"
 	}
 }

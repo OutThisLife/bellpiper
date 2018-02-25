@@ -1,0 +1,32 @@
+text-align: center;
+padding: var(--pad) 0;
+border: 5px solid rgb(var(--header-bg));
+background: radial-gradient(circle at center, rgb(var(--header-bg)), rgb(var(--bg)));
+
+> div {
+  padding: 0 var(--pad);
+}
+
+h3 a {
+  border-bottom: 1px solid rgba(var(--gray), .4);
+  transition: .3s ease-in-out;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: none;
+
+  em {
+    color: rgb(var(--gray));
+    font-family: var(--font-serif);
+  }
+
+  strong {
+    color: rgb(var(--brand));
+  }
+}
+
+.progressbar-text {
+  font-size: 2rem;
+}

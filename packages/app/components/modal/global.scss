@@ -1,0 +1,12 @@
+main .inner {
+  transition: .4s ease-in-out;
+
+  .modal-open & {
+    filter: blur(5px);
+    transform: scale(0.95);
+
+    .toolbar {
+      opacity: 0;
+    }
+  }
+}

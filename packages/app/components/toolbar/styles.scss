@@ -1,0 +1,134 @@
+z-index: 500;
+position: fixed;
+top: 70px;
+left: var(--sidebar-width);
+right: 0;
+height: 65px;
+padding: calc(var(--pad) / 2) var(--pad);
+border-left: 2px solid rgb(var(--bg));
+transform: translate3d(0, 0, 0);
+background: rgb(var(--header-bg));
+
+@media (max-width: 767px) {
+  position: static;
+
+  .group {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+
+@media (min-width: 767px) {
+  overflow: hidden;
+
+  + * {
+    margin-top: 65px;
+  }
+}
+
+.animate-out & {
+  animation: fadeOutUp .6s ease-in-out forwards;
+}
+
+.animate-in & {
+  animation: fadeInDown .6s ease-in-out forwards;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  transition: .7s cubic-bezier(0.7,0,0.3,1);
+
+  + .group {
+    opacity: 0;
+    transform: translate(0, 30px);
+  }
+}
+
+&.show-next .group {
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(0, -30px);
+  transition-delay: .544s;
+
+  + .group {
+    pointer-events: auto;
+    opacity: 1;
+    transform: translate(0, -32.5px);
+  }
+}
+
+h2 {
+  display: block;
+  min-width: 105px;
+  margin: 0 var(--pad) 0 0;
+  padding: 0 var(--pad) 0 0;
+
+  @media (min-width: 767px) {
+    border-right: 2px solid rgb(var(--bg));
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+
+  a {
+    color: inherit;
+    transition: .3s ease-in-out;
+
+    &:hover {
+      color: rgb(var(--secondary));
+    }
+  }
+}
+
+label {
+  color: rgb(var(--gray));
+  font-size: 12px;
+
+  input, select {
+    margin-left: 10px;
+  }
+}
+
+nav {
+  display: flex;
+  align-items: stretch;
+  height: 30px;
+  line-height: 30px;
+  margin-left: auto;
+
+  > * + * {
+    margin-left: 15px;
+  }
+
+  > a {
+    color: rgb(var(--secondary));
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    + a {
+      margin-left: 3px;
+    }
+  }
+
+  input, select {
+    display: inline-block;
+    width: auto;
+
+    + span {
+      display: inline-block;
+      border-radius: 0 3px 3px 0;
+      padding: 0 5px;
+      background: rgba(var(--gray), .2);
+    }
+  }
+
+  button {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

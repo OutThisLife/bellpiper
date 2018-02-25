@@ -1,0 +1,41 @@
+form nav {
+  margin: 0;
+
+  label {
+    position: relative;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: none;
+
+    span {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 1px;
+      border-left: 1px solid rgba(var(--gray), .35);
+    }
+
+    input {
+      height: 100%;
+      text-align: center;
+    }
+
+    &:first-child input {
+      width: 70px;
+      padding: 0 10px;
+    }
+
+    &:not(:first-child) input {
+      width: 60px;
+      padding-right: 25px;
+    }
+  }
+
+  select, button {
+    height: 100%;
+  }
+}
+
+p {
+  margin: 0 0 0 auto;
+}

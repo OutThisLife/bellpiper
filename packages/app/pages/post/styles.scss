@@ -1,0 +1,144 @@
+z-index: 100;
+display: flex;
+align-items: flex-start;
+position: absolute;
+top: 0;
+left: var(--pad);
+right: var(--pad);
+padding: calc(var(--pad) * 2);
+border-radius: 3px;
+box-shadow: inset 0 0 0 2px rgb(var(--secondary));
+background: rgb(var(--secondary));
+
+@media (max-width: 767px) {
+  padding: var(--pad);
+}
+
+&:not(.fade-in) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+&.fade-in {
+  transition: opacity .34s ease-in-out;
+}
+
+&:not(.animate-in) {
+  header, figure, section {
+    opacity: 0;
+  }
+}
+
+&.animate-in {
+  transition: .5s .14s cubic-bezier(0.7,0,0.3,1), background .7s .5s cubic-bezier(0.7,0,0.3,1);
+  box-shadow: inset 0 0 0 2px rgb(var(--secondary)), 0 20px 30px rgba(0,0,0,.1);
+  background: rgb(var(--header-bg));
+
+  header, figure, section {
+    transition: .45s .8s ease-in-out;
+  }
+
+  &.animate-out {
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s cubic-bezier(0.7,0,0.3,1), opacity .5s .3s cubic-bezier(0.7,0,0.3,1);
+    background: rgb(var(--secondary));
+
+    header, figure, section {
+      opacity: 0;
+      transition-duration: .3s;
+      transition-delay: 0s;
+    }
+  }
+}
+
+.animate-out & {
+  animation: fadeOutDownSlight .3s ease-in-out forwards;
+}
+
+.close {
+  position: absolute;
+  top: var(--pad);
+  right: var(--pad);
+}
+
+aside {
+  width: 100%;
+
+  @media (min-width: 767px) {
+    padding-left: var(--pad);
+  }
+}
+
+header {
+  a {
+    color: rgb(var(--gray));
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-family: var(--font-serif);
+    margin: 0;
+
+    @media (max-width: 767px) {
+      font-size: 2rem;
+    }
+  }
+
+  em {
+    display: block;
+    font-style: normal;
+    color: rgb(var(--gray));
+
+    i img {
+      width: 14px;
+    }
+  }
+}
+
+section {
+  margin: var(--pad) auto 0;
+
+  h1,h2,h3,h4,h5,h6 {
+    font-family: var(--font-serif);
+    margin: 50px auto 1em;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  p, ul, ol, dl, blockquote {
+    color: inherit;
+    font-size: 1.14rem;
+    line-height: 1.6;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: rgb(var(--secondary));
+      text-decoration: underline;
+
+      &:hover {
+        color: inherit;
+      }
+    }
+  }
+
+  blockquote {
+    font-style: italic;
+    font-family: var(--font-serif);
+    margin-left: 0;
+    padding-left: 20px;
+    border-left: 2px solid rgb(var(--secondary));
+  }
+}

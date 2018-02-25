@@ -1,0 +1,33 @@
+height: calc(100vh - 200px);
+
+p {
+  z-index: 50;
+  pointer-events: none;
+  display: block;
+  width: 100%;
+  position: relative;
+  color: rgb(var(--gray));
+  font-size: 2rem;
+  text-align: center;
+  margin: var(--pad) 0 0 0;
+  transform: translate(0, 29px);
+  background: rgb(var(--bg));
+
+  .container:not(.clone) & {
+    animation: fadeOut .7s 5s ease-in-out forwards;
+  }
+}
+
+aside {
+  z-index: 100;
+  position: absolute;
+  top: var(--pad);
+  left: calc(var(--pad) * 4);
+  width: 120px;
+
+  h2 {
+    color: rgb(var(--gray));
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+}

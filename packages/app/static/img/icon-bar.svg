@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" viewBox="0 0 512 512" preserveAspectRatio='xMinYMin' shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" clip-rule="evenodd"><defs><style><![CDATA[
+    .str0 {stroke-width:31.9998;stroke-linecap:round;stroke-linejoin:round}
+    .str2 {stroke-width:31.9998;stroke-linecap:round;stroke-linejoin:round}
+    .str1 {stroke-width:31.9998;stroke-linecap:round;stroke-linejoin:round}
+    .fil0 {fill:none}
+   ]]></style></defs><g id="Layer_x0020_1"><g id="_14316431072"><path d="M200 16h112v480H200z" class="fil0 str0"/><path d="M16 272h112v224H16z" class="fil0 str1"/><path d="M384 176h112v320H384z" class="fil0 str2"/></g></g></svg>

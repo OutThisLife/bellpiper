@@ -1,0 +1,58 @@
+a {
+  display: block;
+  position: relative;
+  color: rgb(var(--gray));
+  font-weight: 700;
+  padding: calc(var(--pad) / 2) var(--pad);
+  transition: .3s ease-in-out;
+
+  &:hover, &.active {
+    color: rgb(var(--default));
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 3px;
+    height: 50%;
+    transform: translate(0, -50%);
+    transition: inherit;
+    background: rgb(var(--secondary));
+
+    @media (min-width: 767px) {
+      right: 0;
+    }
+
+    @media (max-width: 767px) {
+      left: 0;
+    }
+  }
+
+  &:not(.active):before {
+    width: 0px;
+  }
+
+  &.active {
+    pointer-events: auto;
+
+    svg path {
+      fill: rgb(var(--secondary));
+      stroke: rgb(var(--secondary));
+    }
+  }
+}
+
+svg {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  margin: 0 10px 0 0;
+
+  path {
+    fill: currentColor;
+    stroke: currentColor;
+  }
+}

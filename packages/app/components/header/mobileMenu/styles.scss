@@ -1,0 +1,49 @@
+color: rgb(var(--gray));
+font-weight: 700;
+font-size: 12px;
+text-transform: uppercase;
+
+@media (min-width: 767px) {
+  display: none;
+}
+
+span {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 2px;
+  margin-right: 10px;
+  transition: background 0.3s ease-in-out;
+  background: rgb(var(--secondary));
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -250%;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    transition: transform 0.3s ease-in-out;
+    background: rgb(var(--secondary));
+  }
+
+  &:after {
+    top: auto;
+    bottom: -250%;
+  }
+}
+
+&.open span {
+  background: transparent;
+
+  &:before {
+    transform: translate(0, 5px) rotate(-45deg);
+  }
+
+  &:after {
+    transform: translate(0, -5px) rotate(45deg);
+  }
+}

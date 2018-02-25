@@ -1,0 +1,33 @@
+{
+	"presets": [
+		"next/babel",
+		"env"
+	],
+	"env": {
+		"development": {
+			"plugins": [
+				"inline-dotenv"
+			]
+		},
+		"production": {
+			"plugins": [
+				"transform-inline-environment-variables"
+			]
+		}
+	},
+	"plugins": [
+		"transform-decorators-legacy",
+		"transform-class-properties",
+		"inline-react-svg",
+		[
+			"module-alias",
+			[
+				{
+					"src": "./",
+					"expose": "@"
+				}
+			]
+		],
+		["styled-components", { "ssr": true, "displayName": true, "preprocess": false } ]
+	]
+}

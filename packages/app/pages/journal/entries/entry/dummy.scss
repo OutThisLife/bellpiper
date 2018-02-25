@@ -1,0 +1,42 @@
+align-self: stretch;
+border-style: dashed;
+box-shadow: none;
+background: none;
+
+@keyframes shinyAddNew {
+  50% {
+    border-color: rgba(var(--secondary), .5);
+  }
+}
+
+&:only-child:not(:hover) {
+  animation: shinyAddNew 2s ease-in-out infinite;
+}
+
+&:after {
+  content: 'Add New Trade';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  color: rgba(var(--secondary), 0.4);
+  font-style: italic;
+  font-size: 1.3rem;
+  font-family: var(--font-serif);
+  text-align: center;
+  transform: translate(0, -50%);
+  transition: inherit;
+}
+
+&:hover {
+  transform: none;
+  box-shadow: none;
+
+  &:after {
+    color: rgb(var(--secondary));
+  }
+}
+
+[data-view='list'] & {
+  padding: var(--pad);
+}

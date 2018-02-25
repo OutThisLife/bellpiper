@@ -1,0 +1,26 @@
+nav a {
+  transition: opacity .3s ease-in-out;
+
+  &:not(.active) {
+    opacity: .2;
+  }
+
+  &:hover:not(.active) {
+    opacity: .5;
+  }
+
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+    width: 19px;
+    height: auto;
+
+    path {
+      fill: rgb(var(--secondary));
+    }
+  }
+}
+
+.group:last-child:not(:only-child) nav a {
+  opacity: 1;
+}
