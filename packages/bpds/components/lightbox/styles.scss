@@ -1,0 +1,50 @@
+z-index: 999;
+display: flex;
+align-items: center;
+justify-content: center;
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background: rgba(var(--header-bg), .8);
+
+&:not(.out) {
+  opacity: 0;
+  animation: fadeIn .3s ease-in-out forwards;
+
+  section {
+    animation: fadeInDownSlight .7s ease-in-out forwards;
+  }
+}
+
+&.out {
+  pointer-events: none;
+  animation: fadeOut .3s ease-in-out forwards;
+}
+
+> a {
+  cursor: default;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+section {
+  z-index: 1;
+  position: relative;
+
+  .close {
+    position: absolute;
+    top: -18px;
+    right: -40px;
+  }
+
+  img {
+    max-width: 80vw;
+    max-height: 70vh;
+    box-shadow: 11px 17px 15px rgba(0, 0, 0, 0.11);
+  }
+}

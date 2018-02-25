@@ -1,0 +1,9 @@
+{
+	"devDependencies": {
+		"lerna": "^2.9.0",
+		"parallelshell": "*"
+	},
+	"scripts": {
+		"dev": "parallelshell \"cd packages/api && yarn dev\" \"cd packages/app && yarn dev\" \"cd packages/site && yarn dev\""
+	}
+}
