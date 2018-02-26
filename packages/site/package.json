@@ -1,44 +1,20 @@
 {
+  "name": "site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "dev": "next",
-    "build": "next build",
-    "start": "serve out -p $PORT",
-    "heroku-postbuild": "next build && bower install && next export",
-    "testbuild": "yarn heroku-postbuild && yarn start",
-    "test": "standard .",
-    "fix": "standard . --fix"
+    "start": "serve out/",
+    "build": "next build && next export",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "bpds": "1.0.0",
-    "eclint": "^2.5.0",
-    "load-script": "^1.0.0",
-    "marked": "^0.3.6",
-    "moment": "^2.18.1",
-    "next": "^4",
-    "raw-loader": "^0.5.1",
-    "react": "^16",
-    "react-dom": "^16",
-    "serve": "^6.4.1",
-    "standard": "^10.0.3",
-    "styled-components": "^2"
-  },
-  "cacheDirectories": [
-    "nextjs/node_modules"
-  ],
-  "standard": {
-    "globals": [
-      "location",
-      "navigator",
-      "analytics",
-      "localStorage",
-      "techan",
-      "d3",
-      "main",
-      "header",
-      "footer",
-      "zoom",
-      "TimelineLite"
-    ]
+    "next": "^5.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   }
 }
